@@ -74,7 +74,7 @@ gem 'kaminari'
 gem 'jquery-rails'
 
 # Bootstrap gem
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.4.1'
 
 # Sidekiq Gem for job management
 gem 'sidekiq', '5.2.2'
