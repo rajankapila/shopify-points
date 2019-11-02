@@ -1,11 +1,12 @@
-SHOPIFY_API_KEY: ''
-SHOPIFY_API_SECRET: ''
-SHOPIFY_APP_DOMAIN: '' #no trailing slash
-GMAIL_USERNAME: ''
-GMAIL_PASSWORD: ''
-SHOPIFY-POINTS_DATABASE_NAME: ''
-SHOPIFY-POINTS_DATABASE_USER: ''
-SHOPIFY-POINTS_DATABASE_PASSWORD: '' #Uncomment in database.yml if you are using for development
+developerment:
+  SHOPIFY_API_KEY: ''
+  SHOPIFY_API_SECRET: ''
+  SHOPIFY_APP_DOMAIN: '' #no trailing slash
+  GMAIL_USERNAME: ''
+  GMAIL_PASSWORD: ''
+  DATABASE_NAME: ''
+  DATABASE_USER: ''
+  DATABASE_PASSWORD: '' #Uncomment in database.yml if you are using for development
 
 production:
   SHOPIFY_API_KEY: ''
@@ -13,3 +14,6 @@ production:
   SHOPIFY_APP_DOMAIN: ''
   GMAIL_USERNAME: ''
   GMAIL_PASSWORD: ''
+  DATABASE_NAME: ''
+  DATABASE_USER: ''
+  DATABASE_PASSWORD: '' #Uncomment in database.yml if you are using for development

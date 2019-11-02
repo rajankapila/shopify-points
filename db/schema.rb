@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_01_001529) do
   enable_extension "plpgsql"
 
   create_table "customers", force: :cascade do |t|
-    t.integer "shop_id"
+    t.bigint "shop_id"
     t.string "customer_id"
     t.string "first_name"
     t.string "last_name"
@@ -24,13 +24,15 @@ ActiveRecord::Schema.define(version: 2019_11_01_001529) do
     t.integer "points", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_customers_on_shop_id"
   end
 
   create_table "shop_configs", force: :cascade do |t|
-    t.integer "shop_id"
+    t.bigint "shop_id"
     t.integer "points_per_dollar", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_shop_configs_on_shop_id"
   end
 
   create_table "shops", force: :cascade do |t|
@@ -41,4 +43,6 @@ ActiveRecord::Schema.define(version: 2019_11_01_001529) do
     t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
   end
 
+  add_foreign_key "customers", "shops"
+  add_foreign_key "shop_configs", "shops"
 end
